@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")
+    %meta(charset="utf-8")
+    %meta(content="ie=edge" http-equiv="x-ua-compatible")
+    %meta(content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport")
+    %title= current_page.data.title || "Middleman"
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "tether"
+    = stylesheet_link_tag "tether-theme-arrows-dark"
+    = stylesheet_link_tag "site"
+    = javascript_include_tag "jquery"
+    = javascript_include_tag "tether"
+    = javascript_include_tag "bootstrap"
+    = javascript_include_tag "site"
+  %body
+    %nav.navbar.navbar-toggleable-md.navbar-inverse.fixed-top.bg-inverse
+      %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      %a.navbar-brand{:href => "https://polleverywhere.com"} Poll Everywhere
+      #navbarCollapse.collapse.navbar-collapse
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "/"}
+              Home
+              %span.sr-only (current)
+
+    .container
+      = yield
+
+    %footer.footer
+      .container
+        %ul.bd-footer-links
+          %li
+            %a(href="/case-study-1.html") Case study 1
+          %li
+            %a(href="/case-study-2.html") Case study 2
+          %li
+            %a(href="/case-study-3.html") Case study 3
+          %li
+            %a(href="/case-study-4.html") Case study 4
+          %li
+            %a(href="/case-study-5.html") Case study 5
+          %li
+            %a(href="/case-study-6.html") Case study 6
