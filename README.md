@@ -35,7 +35,9 @@ Once you've got middleman installed, you'll want to:
 
 1. Integrate an asset pipeline into the Middleman project that minifies CSS, JS, and images and makes the pages load fast.
 
-2. Develop process and method of templateing use case pages that makes it easier for you to add new use cases and maintain existing use cases.
+2. When somebody adds a new case study to the `./source/case-studies` directory or changes the `title` frontmatter key; make the changes appear automatically in the footer on all pages, on the "/" homepage, and on the "/case-studies.html" page.
+
+3. The images that represent case studies at "/" and "/case-studies.html" are not DRY. If somebody in marketing decices they want a different image to represent a case study, how can you structure the page so that you change that URL in one place and it updates in all of the areas where the case study is referenced?
 
 ## Helpful resources
 
