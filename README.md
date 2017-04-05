@@ -1,4 +1,4 @@
-# Optimize.me
+# The Case Study microsite
 
 Karl from marketing started building a micro-site for case studies. He did a pretty good job getting the prototype off the ground, but he wants you to take it over and make the images, CSS, and JavaScript load faster to deploy to a production website. Once the website is deployed to production, the marketing team wants to deploy around 100 new case studies that a team of designers and writers will produce.
 
