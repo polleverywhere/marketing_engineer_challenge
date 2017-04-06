@@ -14,23 +14,30 @@ That's where you come in. Your goals are:
 
 1. Create a build process that minifies CSS/JavaScripts and compresses images.
 
-2. When a new case study is added to the `./source/case-studies` directory or the `title` frontmatter key is changed update:
-  - the "/" homepage
-  - the matching case study page
-  - the footer on all pages
+2. When adding a new case study to the `./source/case-studies` directory, those changes are reflected:
+  - On the home page
+  - In the site footer
+  - On the individual case study page
 
-3. If somebody in marketing decides they want a different image to represent a case study, can you structure the page so that you change the image URL in one place and have it update all of the areas where the case study is referenced? Can you make this image appear as a hero shot on the case study page itself?
+3. If the `title` frontmatter key is changed, the matching case study's title changes:
+  - On the home page
+  - In the site footer
+  - On the individual case study page
 
-4. Write automated tests to review the quality of the content provided by the marketing team (eg. spelling errors, dead links, more than one h1 tag on a page, etc.).
+4. If somebody in marketing decides they want a different image to represent a case study, can you structure the page so that you change the image URL in one place and have it update all of the areas where the case study is referenced? Can you make this image appear as a hero shot on the case study page itself?
+
+5. Write automated tests to review the quality of the content provided by the marketing team (eg. spelling errors, dead links, more than one h1 tag on a page, etc.).
 
 ## Getting started
 
 1.
-    To complete this problem you'll need a development environment with:
+    The minimum requirements to run this site are
 
     - git
     - Ruby (2.3.1)
     - bundler
+
+    You may add additional tools (eg. Webpack, Grunt, Gulp) if you'd like.
 
 2. Clone this repo via `git clone git@github.com:polleverywhere/marketing_engineer_challenge.git`
 
