@@ -4,16 +4,29 @@ Karl from marketing started building a micro-site for case studies. He did a pre
 
 That's where you come in. Your goals are:
 
-1. Make sure people on the Internet can load the pages as quickly and efficiently as possible to make things fast and keep conversion rates high. The only metric the marketing team has to go off of is a [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) score of 90 or better. Employ your site optimization know-how to meet those requirements.
+- Make sure that users can load the pages quickly to keep conversion rates high. Karl's success metric is a [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) score of 90 or better. Use any site optimization techinques you know to hit that mark.
 
-2. Make the Middleman project more maintainable. The marketing team wants to quickly and cheaply create 100 new case studies. They're technical enough to be dangerous in basic markdown, HTML, or other markup languages, so you can safely assume they'll be giving you those types of files to put into this website. They're also comfortable using Frontmatter. Do *NOT* expect them to know CSS, JavaScript, or even medium-level HTML skills. When Marsha tried to teach them HTML tables last quarter, they all fell asleep within the first 10 minutes of the class so she bailed early to go kite surfing.
+- Create a simple content production workflow that works for both engineering and marketing. This workflow should accept files from the marketing team, then optimize and deploy them to production.
 
-3. Develop a content production pipeline/workflow using Middleman that makes it easy for you to accept files from the designers and writers on the marketing team and deploy those to production in a way that pleases Google Page Speed Insights with a score of 90 or better.
+- Ensure that this process scales. The marketing team wants to create 100 new case studies. They're technical enough to be dangerous in basic markdown, HTML, HAML, and Frontmatter. Do *NOT* expect them to know CSS, JavaScript, or even medium-level HTML skills. When Marsha tried to teach them HTML tables last quarter, they all fell asleep within the first 10 minutes of the class, so she bailed to go kite surfing.
 
-# Getting started
+## Implementation details
+
+1. Create a build process that minifies CSS/JavaScripts and compresses images.
+
+2. When a new case study is added to the `./source/case-studies` directory or the `title` frontmatter key is changed update:
+  - the "/" homepage
+  - the matching case study page
+  - the footer on all pages
+
+3. If somebody in marketing decides they want a different image to represent a case study, can you structure the page so that you change the image URL in one place and have it update all of the areas where the case study is referenced? Can you make this image appear as a hero shot on the case study page itself?
+
+4. Write automated tests to review the quality of the content provided by the marketing team (eg. spelling errors, dead links, more than one h1 tag on a page, etc.).
+
+## Getting started
 
 1.
-    To complete this problem you'll need a computer with the following installed:
+    To complete this problem you'll need a development environment with:
 
     - git
     - Ruby (2.3.1)
@@ -28,19 +41,6 @@ That's where you come in. Your goals are:
 5. Open the website at http://127.0.0.1:4567
 
 The files you'll be editing are in the `./source` directory of the project.
-
-## Instructions
-
-Once you have Middleman installed, you'll want to:
-
-1. Integrate an asset pipeline into the Middleman project that minifies CSS and JS, compresses images, and makes the pages load fast.
-
-2. When somebody adds a new case study to the `./source/case-studies` directory or changes the `title` frontmatter key make the changes appear automatically in:
-  - the footer on all pages
-  - the "/" homepage
-  - the matching case study page
-
-3. Images that represent case studies at "/" and "/case-studies/*.html" are not DRY. If somebody in marketing decides they want a different image to represent a case study, how can you structure the page so that you change that URL in one place and it updates in all of the areas where the case study is referenced? Can you make this image appear as a hero shot on the case study page itself?
 
 ## Helpful resources
 
